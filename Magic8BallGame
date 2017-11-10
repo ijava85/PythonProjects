@@ -1,0 +1,22 @@
+#Program is a simply Magic 8 Ball game utilizing a list
+#Program asks user after first go around if they would like to
+#Play again, continues if "yes" and ends if "no"
+
+import random
+
+messages = ['It is certain.',
+            'It is decidedly so.',
+            'Yes, definitely.',
+            'Reply hazy, try again.',
+            'Ask again later.',
+            'Concentrate and ask again.',
+            'My reply is no.',
+            'Outlook not so good.',
+            'Very doubtful.']
+
+print(messages[random.randint(0, len(messages) - 1)])
+
+reply = input("Would you like to roll again? (yes/no):")
+while reply == "yes" and reply != "no":
+    print(messages[random.randint(0, len(messages) - 1)])
+    reply = input("Would you like to roll again? (yes/no):")
